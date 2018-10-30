@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		"module": "esnext",
+		"target": "es6",
+		"baseUrl": "./",
+		"sourceMap": true,
+		"outDir": "ts-build",
+		"jsx": "react",
+		"strict": true,
+		"moduleResolution": "node",
+		"noErrorTruncation": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"resolveJsonModule": true,
+		"paths": {
+			"apis/*": ["src/apis/*"],
+			"components/*": ["src/components/*"],
+			"models/*": ["src/models/*"],
+			"pages/*": ["src/pages/*"]
+		}
+	},
+	"exclude": ["node_modules"]
+}

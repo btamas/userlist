@@ -1,0 +1,10 @@
+html {
+	font-size: 10px;
+}
+
+:global {
+	.title {
+		font-weight: bold;
+		font-size: 4rem;
+	}
+}
