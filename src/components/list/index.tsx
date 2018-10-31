@@ -9,7 +9,7 @@ interface IListProps<T> {
 	className?: string;
 }
 
-export default class List<T> extends React.Component<IListProps<T>, {}> {
+export default class List<T> extends React.PureComponent<IListProps<T>, {}> {
 	render() {
 		const { items, renderItem, className } = this.props;
 		return (

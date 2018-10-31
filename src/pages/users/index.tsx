@@ -13,7 +13,7 @@ interface IUsersPageState {
 
 const PageSizes = [10, 20, 50];
 
-export default class UsersPage extends React.Component<{}, IUsersPageState> {
+export default class UsersPage extends React.PureComponent<{}, IUsersPageState> {
 	state = {
 		search: '',
 		pageSize: 10,
