@@ -27,3 +27,6 @@ The api request is made in user page (`pages/user`) with user api handler (`api/
 - Production
   - `npm run build`
   - Serve built files from `dist` directory
+    Example:
+    - `npm i --no-save http-server`
+    - `node_modules/.bin/http-server dist/ -p 1337`
