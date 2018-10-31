@@ -9,7 +9,7 @@ const Suspense = (React as any).Suspense;
 const lazy = (React as any).lazy;
 const memo = (React as any).memo;
 
-const UsersPage = lazy(() => import(/* webpackMode: "lazy" */ 'pages/users'));
+const UsersPage = lazy(() => import(/* webpackMode: "lazy", webpackChunkName: "users" */ 'pages/users'));
 
 const App = () => (
 	<main>
