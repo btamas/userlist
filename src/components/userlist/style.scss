@@ -1,9 +1,10 @@
-.user {
+.userlistitem {
 	display: flex;
 	align-items: center;
-}
+	font-size: 1.4rem;
 
-.username {
-	text-transform: capitalize;
-	margin: 2rem;
+	&__name {
+		text-transform: capitalize;
+		margin: 2rem;
+	}
 }

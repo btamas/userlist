@@ -3,7 +3,7 @@ import UserList from 'components/userlist';
 import { getUsers } from 'apis/user';
 import { IUser, User } from 'models/user';
 
-const style = require('./style');
+import './style';
 
 interface IUsersPageState {
 	search: string;
@@ -58,14 +58,14 @@ export default class UsersPage extends React.Component<{}, IUsersPageState> {
 		return (
 			<span>
 				<label htmlFor="search">Search: </label>
-				<input type="text" name="search" className={style.controlInput} onKeyUp={this.onSearch} />
+				<input type="text" name="search" className="userpage__controlinput" onKeyUp={this.onSearch} />
 			</span>
 		);
 	}
 
 	get pageSizeSelector() {
 		return (
-			<select className={style.controlInput} onChange={this.onPageSizeChange}>
+			<select className="userpage__controlinput" onChange={this.onPageSizeChange}>
 				{PageSizes.map(pageSize => (
 					<option key={pageSize}>{pageSize}</option>
 				))}
@@ -75,7 +75,7 @@ export default class UsersPage extends React.Component<{}, IUsersPageState> {
 
 	get controls() {
 		return (
-			<div className={style.controls}>
+			<div className="userpage__controls">
 				{this.search}
 				{this.pageSizeSelector}
 			</div>
@@ -89,12 +89,12 @@ export default class UsersPage extends React.Component<{}, IUsersPageState> {
 			return <UserList users={users} />;
 		}
 
-		return <div className={style.emptyList}>List is empty</div>;
+		return <div className="empty">List is empty</div>;
 	}
 
 	render() {
 		return (
-			<div className={style.page}>
+			<div className="userpage">
 				<h1 className="title">User list</h1>
 				{this.controls}
 				{this.userList}

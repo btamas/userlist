@@ -2,7 +2,7 @@ import * as React from 'react';
 import { IUser } from 'models/user';
 import List from 'components/list';
 
-const style = require('./style');
+import './style';
 
 interface IUserListProps {
 	users: IUser[];
@@ -13,9 +13,9 @@ const initialImage = (name: string) =>
 
 const UserList: React.StatelessComponent<IUserListProps> = props => {
 	const renderItem = (item: IUser) => (
-		<span className={style.user}>
+		<span className="userlistitem">
 			<img src={initialImage(item.name)} />
-			<span className={style.username}>{item.name}</span>
+			<span className="userlistitem__name">{item.name}</span>
 		</span>
 	);
 	return <List items={props.users} renderItem={renderItem} />;
