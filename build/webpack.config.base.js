@@ -18,7 +18,7 @@ module.exports = (environment = 'development') => ({
 					{
 						loader: 'css-loader',
 						options: {
-							modules: true
+							modules: false
 						}
 					},
 					{ loader: 'csso-loader' },
